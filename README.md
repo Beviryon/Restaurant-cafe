@@ -1,2 +1,2 @@
 # Restaurant-cafe
-C'est une site d'un restaurant café
+C'est un site d'un restaurant café
