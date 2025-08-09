@@ -1,11 +1,13 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     background-color: #f0f0f0;
     color: #333;
     margin: 0;
     padding: 0;
 }
+
+/* la barre de navigation */
 nav {
     background-color: #30002b;
     padding: 1rem 0;
@@ -39,23 +41,62 @@ nav ul li a:hover {
     border-radius: 6px;
 }
 
+/* le contenu de la page d'accueil */
+
+/* Hero */
+
+.hero {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: url(https://images.pexels.com/photos/4552173/pexels-photo-4552173.jpeg) center/cover no-repeat;
+}
+
+.hero::after {
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+}
+
 .container {
     max-width: 1200px;
     color: #7800db;
     margin: 2rem auto;
     padding: 0 1rem;
     align-items: center;
+    z-index: 2;
+    position: relative;
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    background-color: #FFC269;
+    padding: 0.75rem 1.5rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    display: inline-block;
+    text-decoration: none;
 }
 
 h1 {
-    color: #6f0164;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 4rem;
 }
 p {
-    color: #7800db;
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -67,4 +108,26 @@ p {
     nav ul li {
         margin: 0.5rem 0;
     }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* style footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* max-width: 1200px; */
+    margin-top: auto;
+    padding: 1.5rem 1rem;
+    background-color: #30002b;
+    color: white;
+    flex: 1;
 }
